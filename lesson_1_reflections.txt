@@ -1,0 +1,38 @@
+1. How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+When you have access to the entire history of a file, you can always have a check on which part of the file is changed by you and what time.
+In that sense if you have made any change in the file and the file start malfunctioning then you will know that what changes in that file actually made this malfunctioning happen. 
+Again will version control you can always know the stepwise changes to you file over the time to its completion.
+
+2. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+Pros: 
+You can commit based on the changes you made to the file on your own preferences.
+Commit of the file are manageable on the git account as every commit serves a specific purpose.
+No overhead of commiting the file on regular time interval.
+
+Cons:
+If developers forgets the commit it might affect data loss due to inconsistency.
+
+3. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+The git can allow you to save multiple file at the same time since it allows you to save you whole project consisting of many files at the same time.
+Whereas in google docs one is allowed to edit just one file at one instance, and that is why it allows saving single file at a time.
+
+4. How can you use the commands git log and git diff to view the history of files?
+
+git log: 
+This is basically useful for getting a logged details of the various commits
+This will contain the ID of the commit, and its message
+
+git diff:
+Using this command we can look for the changes made in the file between two different commits. 
+For getting a diff between two commits type 
+git diff first-commit-id second-commit-id
+
+5. How might using version control make you more confident to make changes that could break something?
+Using the "git checkout commit_id" we can check how our code performed at a certain commit. Once we found that certain commit break our code we can check the changes in that commit by "git diff first-commit-id second-commit-id". 
+This way we can check at what point our code break any time.
+So it is way more comfortable to use version control to be able to track down the system break point.
+
+6. Now that you have your workspace set up, what do you want to try using Git for?
+I would like to use the git while I try and develop new android application so that I can make the changes in the project over time and I can keep track of the changes to make it more like a incremetal project at each step with new chunk of working code at every commit.

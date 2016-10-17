@@ -1,0 +1,14 @@
+1. What happens when you initialize a repository? Why do you need to do it?
+
+Whenever you initialize a repository a new repository will be created. All the content inside the repository folder is pushed to the git. 
+By creating a new repository for a project we can commit the changes during the development process to perform version-control.
+
+2. How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+The staging area lets you choose the file before you make a commit.
+In this you can add one or more files at a time.
+The files put in the staging area are ready for the commit but not put on the git until commit is made.
+
+Working directory is the directory where your files for the current project/task resides.
+
+Repository is for the git, where you can commit your files which further will be useful for version-control.
