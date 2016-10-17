@@ -5,10 +5,19 @@ By creating a new repository for a project we can commit the changes during the 
 
 2. How is the staging area different from the working directory and the repository? What value do you think it offers?
 
+Working directory is the directory where your files for the current project/task resides and your current changes are in current directory before commit.
+
 The staging area lets you choose the file before you make a commit.
 In this you can add one or more files at a time.
 The files put in the staging area are ready for the commit but not put on the git until commit is made.
-
-Working directory is the directory where your files for the current project/task resides.
+Using git add you can push your file to the staging area.
 
 Repository is for the git, where you can commit your files which further will be useful for version-control.
+Once you commit the changes using git commit the changes are pushed to the git repository
+
+git diff : to find the difference between a file at working directory and staging area
+git diff --staged : to find the difference between a file at staging area and repository
+
+3. How can you use the staging area to make sure you have one commit per logical change?
+
+For each logical change we can push the changes to the staging area and then we can make the final commit to push the changes to the respository.
