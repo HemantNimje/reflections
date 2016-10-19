@@ -21,3 +21,12 @@ git diff --staged : to find the difference between a file at staging area and re
 3. How can you use the staging area to make sure you have one commit per logical change?
 
 For each logical change we can push the changes to the staging area and then we can make the final commit to push the changes to the respository.
+
+4. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+If we want to try some experimental function on our main code we might crash the main code by that experimental function code.
+In that sense we need to fix the main code first and then need to add that experimental function again.
+This is mostly can be seen if we have any working software and we need to add new functionality.
+We cannot afford breaking the working software in order to add new functionality.
+At this time the concept of branches comes in handy. We can create a branch of the main code which will be the exact replica of the main code.
+We can improve and test the branch to check whether adding the new functionality break the working software or not. Meanwhile the software is operational since we are not doing any changes directly on the main branch. Once the new functionality is tested to be working aginst the branch code we can proceed and merge it with the main code.
