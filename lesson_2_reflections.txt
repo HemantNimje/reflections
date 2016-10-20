@@ -30,3 +30,6 @@ This is mostly can be seen if we have any working software and we need to add ne
 We cannot afford breaking the working software in order to add new functionality.
 At this time the concept of branches comes in handy. We can create a branch of the main code which will be the exact replica of the main code.
 We can improve and test the branch to check whether adding the new functionality break the working software or not. Meanwhile the software is operational since we are not doing any changes directly on the main branch. Once the new functionality is tested to be working aginst the branch code we can proceed and merge it with the main code.
+
+5. How do the diagrams help you visualize the branch structure?
+Using the diagrams we can tell which is the flow of commits (most recent to least recent) for any branch.
