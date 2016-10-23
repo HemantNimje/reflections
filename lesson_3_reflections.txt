@@ -3,4 +3,22 @@
 If I am accessing from any other system than my own or any another member in my project is contributing to the project repository it is better to use a remote repository rather than a local one.
 
 2. Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
 The remote repository is where your project resides. Now consider if you have made any changes from another system or any project partner is contributing to the repository, then you first need to make sure that your recent changes in the code did not break the functionality. Also if you are working on the same branch you don't want to add the code changes by other developer while you are still working on same chunk of code. If the code is synced auto the changes made by other contributors will get added to your local copy and then it will be difficult to track the changes using the commits since commits by other contributors will also be get added to the log.
+
+3. Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Fork - 
+A copy of the original will be saved to your git hub account.
+You can make changes to it without affecting the original repository from which you made a copy for you.
+All changes will be saved to the copied repository available at your account.
+
+Clone -
+Clone will add a copy to your system(local copy).
+The changes made to the local copy will reflect on the github account once the changes are pushed.
+
+Branches - 
+The branch is used to try out extra feature without breaking the original functionality.
+A new branch is made on which new functions can be tried out.
+Once new functionality is complete and fully functional with the previous working stage of the project the branch can be merged to the master branch.
+
