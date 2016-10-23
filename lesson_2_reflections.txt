@@ -36,3 +36,6 @@ Using the diagrams we can tell which is the flow of commits (most recent to leas
 
 6. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 By merging two branches we merge the one branch to the other branch so that new functionality code changes are now added to the main code. As we merge the branch now we no longer need it. So we can delete the branch title and with git log we can log all the commits in the main branch as well as the sub branch which will return the log according to the timestamp, i.e. from most latest to the least latest.
+
+7. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Git is will recognise the merging operations automatically for the branches but it is not able to do so when there is conflict, i.e if same chunk of code is modified by two developers git will not be able to decide which one to commit to. So in this case the manual merging must be performed in order to solve the conflict and merge it.
