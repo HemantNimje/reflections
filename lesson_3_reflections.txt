@@ -29,4 +29,8 @@ If we know the last state of the remote stored locally then we can perform the f
 a       b
 Merge the b in a so that now the diagram will be like
 0---0---0
-        a     
+        a
+
+5. How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+Without using Git or Github, we need to share the data amongst project team and need to perform the check on the difference between every two versions manually. This is much tedious task as duplicacy of the files will make the merging of the file complex. Using Git and Github is much more simple than this.     
