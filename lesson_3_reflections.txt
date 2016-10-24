@@ -22,3 +22,11 @@ The branch is used to try out extra feature without breaking the original functi
 A new branch is made on which new functions can be tried out.
 Once new functionality is complete and fully functional with the previous working stage of the project the branch can be merged to the master branch.
 
+4. What is the benefit of having a copy of the last known state of the remote stored locally?
+
+If we know the last state of the remote stored locally then we can perform the fast forward merge which is basically merging the file with its previous state and updating the lable of the branch itself.
+0---0---0
+a       b
+Merge the b in a so that now the diagram will be like
+0---0---0
+        a     
