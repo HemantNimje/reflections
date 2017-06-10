@@ -1,0 +1,1 @@
+Note: This files is created to save some quick notes while learning through the Android performance coursework at Udacity
