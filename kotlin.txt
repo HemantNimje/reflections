@@ -83,6 +83,46 @@ str!!.length
 This means that the user is sure that the value of 'str' is not null and kotlin should proceed and calculate the length of the string 
 YET THIS MIGHT GIVE YOU THE NULLPOINTEREXCEPTION in case your value is null at the moment.
 
+DECLARING NULLABLE VARIABLE :	var str: String? = "Hello"
+
+SAFE CALL TO A METHOD :		str?.length()
+
+UNSAFE CALL :	str!!.length()
 
 
+CONDTIONAL STATEMENTS:
+	You can either use if statements or when statements to use conditional approach
+	e.g.
+		if(age < 21){
+			doSomething
+		}
 
+		val mode: Int = 3
+		when(mode){
+			1 -> doSomething
+			2 -> {
+				doSomthingElse
+			}
+			3 -> doSomethingDifferent
+			else -> {
+				doSomethingForRestOfTheCases
+			}
+		}
+
+NOTE : when is similiar to switch statement in Java
+
+CONDITIONAL EXPRESSIONS: 
+	For these you have to return the result in any value like
+		val mode: Int = 3
+		val result = when(mode){
+			1 -> "One"
+			2 -> {
+				"Two"
+			}
+			3 -> "Three"
+			else -> {
+				"Not one two or three"
+			}
+
+			println(result)
+		}
