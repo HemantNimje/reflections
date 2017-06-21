@@ -109,7 +109,7 @@ CONDTIONAL STATEMENTS:
 			}
 		}
 
-NOTE : when is similiar to switch statement in Java
+NOTE : when is similiar to switch statement in Java provided that we don't need to declare break after each case in kotlin as break is implicit in kotlin
 
 CONDITIONAL EXPRESSIONS: 
 	For these you have to return the result in any value like
