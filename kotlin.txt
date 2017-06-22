@@ -126,3 +126,29 @@ CONDITIONAL EXPRESSIONS:
 
 			println(result)
 		}
+
+
+COLLECTIONS:
+
+We can use list,array,arrayList as our collections
+
+Array - to be used when the elements are fixed and are not going to change over time
+	e.g. array of states (fixed size)
+
+List - to be used when the elements are to be added or to be removed over time
+	e.g. list of players in a match (the players will be changed over time)
+	Yet the list is immutable list. We can rather create a mutable list using ArrayList
+
+ArrayList - to be used when need to create a mutable list
+
+	ARRAY:
+		We can simply create an array with all elements as same datatype or different datatype as 
+			val numbers = intArrayOf(1,2,3,4,5)	- all elements of same datatype
+			val mixed = arrayOf("Hello",17,3.0,false) - all elements of different datatype
+
+		Array addition is allowed for arrays of same datatype
+			val primaryStates = arrayOf("Pennsylvania","Ohio","Virginia")
+			val secondaryStates = arrayOf("California","Texas")
+			val allStates = primaryStates + secondaryStates
+
+			
