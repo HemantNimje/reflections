@@ -1,0 +1,20 @@
+BREAK:
+	used to abort the iteration based on certain conditions 
+	e.g. 
+		for(c in "Python"){
+			if(c == "o"){
+			break
+			}
+			print(c)
+		}
+
+CONTINUE:
+	used to skip any current iterations and continue to the next iteration
+	e.g.
+		val list = listOf("Book","Table","Laptop")
+		for(str in list){
+			if(!str.contains('o')){
+				continue
+			}
+			println(str)
+		}
