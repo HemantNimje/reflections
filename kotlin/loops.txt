@@ -1,0 +1,26 @@
+
+LOOPS:
+	FOR:
+		the for loop can be used to repeat any task multiple times such as printing 1 to 10 can be done as
+			e.g. for(i in 1..10){
+					println(i)
+				}
+
+		we can use for loop to print the elements of an array as
+			e.g. var array = arrayOf("Java","Kotlin","Python")
+				 for(elements in array){
+				 println(elements)
+				 }
+
+		here "i" or "elements" represents one element at a time from t
+
+		Lets have a bonus code just for fun
+			e.g.
+				for((index,value) in array.withIndex()){
+					println("The element at $index is $value")
+				}
+
+			this code will give output as
+				The element at 0 is Java
+				The element at 1 is Kotlin
+				The element at 2 is Python
