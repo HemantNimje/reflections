@@ -151,4 +151,17 @@ ArrayList - to be used when need to create a mutable list
 			val secondaryStates = arrayOf("California","Texas")
 			val allStates = primaryStates + secondaryStates
 
+You can add the new members to the arraylist by using .add method and include the argument in parenthesis.
+
+In addition to this you can add any element at any specific location by using its index
+	e.g. 	val arrayList = new arrayListOf("One","Two","Three")
+			arrayList.add(0,"Zero")
+
+	If you print this arraylist using
+		println(arrayList)
+	it will print the arraylist as
+		[Zero,One,Two,Three]
+
+		
+
 			
