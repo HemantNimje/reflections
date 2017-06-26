@@ -1,0 +1,37 @@
+
+CONDITIONAL STATEMENTS:
+	You can either use if statements or when statements to use conditional approach
+	e.g.
+		if(age < 21){
+			doSomething
+		}
+
+		val mode: Int = 3
+		when(mode){
+			1 -> doSomething
+			2 -> {
+				doSomthingElse
+			}
+			3 -> doSomethingDifferent
+			else -> {
+				doSomethingForRestOfTheCases
+			}
+		}
+
+NOTE : when is similiar to switch statement in Java provided that we don't need to declare break after each case in kotlin as break is implicit in kotlin
+
+CONDITIONAL EXPRESSIONS: 
+	For these you have to return the result in any value like
+		val mode: Int = 3
+		val result = when(mode){
+			1 -> "One"
+			2 -> {
+				"Two"
+			}
+			3 -> "Three"
+			else -> {
+				"Not one two or three"
+			}
+
+			println(result)
+		}
