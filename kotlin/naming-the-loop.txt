@@ -1,0 +1,30 @@
+If you are implemenyting any nested loop and want to terminate the outer loop for certain condition then you can name the outer loop explicitly and break them by calling their name at break statement
+e.g.
+	// naming the loop
+    outer@for (i in 1..10){
+        for (j in 1..10){
+            if (i - j == 5){
+                break@outer
+            }
+            println("$i-$j")
+        }
+    }
+
+ Here the loop will execute till the i value reach 6. 
+ For i = 6 and j = 1 the condition satisfies and the outer loop is terminated
+ The output produced for above code will print the possible combinations from 1 - 1 to 5 - 10
+
+ On the other hand the regular coding is somewhat like
+ e.g.
+ 	for (i in 1..10){
+        for(j in 1..10){
+            if (i - j == 5){
+                break
+            }
+            println("$i - $j")
+        }
+    }
+
+where the inner loop is terminated whenever the condition is satisfied.
+The outer loop will complete the loop from 1 to 10 and not get terminated after 5 as the first code we say in this document.
+
