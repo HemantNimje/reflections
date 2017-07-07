@@ -1,0 +1,71 @@
+The functions can be of various type
+1. No arguments, no return
+2. 1 argument, no return 
+3. no argument, 1 return
+4. 2 arguments, 1 return
+
+Now lets dig in deeper to know example for above types
+
+1. No arguments, no return
+	When we use print() function we are just giving call to the print() function
+	e.g. 
+
+	// No argument no return
+	fun hello_World(){
+    	println("Hello World!")
+	}
+
+2. 1 argument, no return 
+	Consider that we want to print a word with added space after each letter then it will be like
+	e.g.
+
+	// Print word with added spaces
+	// 1 argument no return
+	fun printWordWithAddedSpaces(text: String){
+    	for (char in text){
+        	print(char + " ")
+    	}
+    	println()
+	}
+
+3. no argument, 1 return
+	Consider that we write a function to return the current date then it will be like
+	e.g.
+	
+	// return current date
+	// No argument 1 return
+	fun getDate():Date{
+    	return Date()
+	}
+
+	here we can see that our function getDate() return object of Date type
+	Since kotlin support java we can use the libraries of java in kotlin very easily
+
+4. 2 argument, 1 return
+	Consider we want to get the maximum of two numbers then we can write it as
+	e.g.
+
+	// get maximum of two numbers
+	fun getMax(a:Int, b:Int):Int {
+    	if (a >= b){
+	        return a
+	    }else{
+    	    return b
+    	}
+	}
+
+	Here the function needs two integers to make comparison to and return an integer whichever is greater
+
+
+The main function to call all the above functions will be as
+
+
+fun main(args: Array<String>) {
+    hello_World()
+    println(getDate())
+    printWordWithAddedSpaces("Kotlin is awesome. I am loving it")
+    println(getMax(5,9))
+}
+
+
+Here we can see that main is also a function which can be used to call from command line if you want to run the program using command line.
