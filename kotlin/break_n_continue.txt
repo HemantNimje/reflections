@@ -8,6 +8,8 @@ BREAK:
 			print(c)
 		}
 
+	output: Pyth
+
 CONTINUE:
 	used to skip any current iterations and continue to the next iteration
 	e.g.
@@ -18,3 +20,6 @@ CONTINUE:
 			}
 			println(str)
 		}
+
+		output: Book
+				Laptop
