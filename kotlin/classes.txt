@@ -1,0 +1,27 @@
+Classes in kotlin is same as the one in java, just a better way to do it.
+Now in kotlin the syntax for classes is a bit different than java yet simple enough to learn.
+e.g.
+	
+class Person{
+    var name: String = "Sarah"
+    var age: Int = 25
+}
+
+fun main(args: Array<String>) {
+    var person = Person()
+    println(person.name)
+    println(person.age)
+
+    person.name = "max"
+    person.age = 22
+
+    println(person.name)
+    println(person.age)
+}
+
+
+the output for the above code will be:
+	Sarah
+	25
+	max
+	22
