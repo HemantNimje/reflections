@@ -1,0 +1,45 @@
+A method is a function inside a class.
+To get access to the method we have to create a object of the clss and then have to invoke the method on it.
+e.g.
+ 
+class Person{
+    var name: String = "Sarah"
+    var age: Int = 25
+
+    // methods
+    fun speak(){
+        println("Hello!")
+    }
+
+    fun greet(name: String){
+        println("Hello $name!")
+    }
+
+    fun getYearOfBirth(): Int{
+        return 2017 - age
+    }
+
+    fun getBirthYear() = 2017 - age
+
+}
+
+fun main(args: Array<String>) {
+    var person = Person()
+    println(person.name)
+    println(person.age)
+
+    person.name = "max"
+    person.age = 22
+
+    println(person.name)
+    println(person.age)
+
+
+    person.speak()
+    person.greet("World")
+    println(person.getYearOfBirth())
+    println(person.getBirthYear())
+
+}
+
+In the above example the methods getYearOfBirth and getBirthYear does the same thing except that the getBirthYear function is more concise.
