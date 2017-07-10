@@ -1,0 +1,16 @@
+In kotlin we can provide default values to the classes which can be a good substitute for the method overriding.
+e.g.
+
+class House(val height: Double,val color: String,val price:Int = 500000){
+
+    fun print(){
+        println("House: [Height = $height, Color = $color, Price = $price]")
+    }
+}
+
+fun main(args: Array<String>) {
+    val greenHouse = House(5.5,"Green",560000)
+    val redHouse = House(price = 580000,color = "Red",height = 8.0)
+    greenHouse.print()
+    redHouse.print()
+}
