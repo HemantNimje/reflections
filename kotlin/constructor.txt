@@ -1,0 +1,38 @@
+In many language we have to declare the local variables and need to intialize them through the constructor.
+So each time we have to include some boilerplate code which does nothing more than just initializing the object.
+Kotlin is very efficient in reducing this boilerplate code.
+e.g.
+
+
+class Person(val name: String,var age:Int){
+
+    // methods
+    fun speak(){
+        println("Hello!")
+    }
+
+    fun greet(name: String){
+        println("Hello $name!")
+    }
+
+    fun getYearOfBirth(): Int{
+        return 2017 - age
+    }
+
+    fun getBirthYear() = 2017 - age
+
+}
+
+fun main(args: Array<String>) {
+    var person = Person("Max",17)
+
+    person.speak()
+    person.greet("World")
+    println(person.getYearOfBirth())
+    println(person.getBirthYear())
+    println(person.name)
+    println(person.age)
+}
+
+NOTE: Here we have declared the arguments for the class itself.
+		Person(val name: String,var age:Int)
