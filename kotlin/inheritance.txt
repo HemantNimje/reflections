@@ -1,0 +1,78 @@
+Inheritance is the way with which you can use the properties of the other class (methods).
+That way you don't have to rewrite the same function again and again.
+Consider you want to design a system for school where you can access the profile of any person inside that school.
+Now first of all we can define a class Person which can include all the basic methods or functions in it that all need
+e.g. 
+	Speak() , Greet()
+
+
+
+open class SchoolPerson(open val name: String,open var age:Int){
+
+    // methods
+    fun speak(){
+        println("Hello!")
+    }
+
+    fun greet(name: String){
+        println("Hello $name!")
+    }
+
+    fun getYearOfBirth(): Int{
+        return 2017 - age
+    }
+
+    fun getBirthYear() = 2017 - age
+
+}
+
+Now if we want to create another classes like student and teacher then we can observe that the functions inside the SchoolPerson class will be required in there too.
+So instead of rewriting the functions again we can inherit the SchoolPerson class so that we can access its properties on the objects of student or teacher.
+
+e.g.
+
+
+class Student(override val name: String,override var age: Int, var house: String):SchoolPerson(name,age){
+    fun print(){
+        println("Student: [Name = $name, Age = $age, House = $house]")
+    }
+}
+
+class Teacher(override val name: String,override var age: Int, var course: String):SchoolPerson(name, age){
+    fun profile(){
+        println("Teacher:[Name = $name, Age = $age, Course = $course]")
+    }
+}
+
+fun main(args: Array<String>) {
+    var person = Person("Max",17)
+
+    person.speak()
+    person.greet("World")
+    println(person.getYearOfBirth())
+    println(person.getBirthYear())
+    println(person.name)
+    println(person.age)
+
+
+    val student = Student("Harry Potter",18,"Gryffindor")
+    student.greet("Harry Potter")
+    println(student.getBirthYear())
+    student.print()
+
+    val teacher = Teacher("Severus Snape",45,"Potions Master")
+    teacher.profile()
+    println(teacher.getYearOfBirth())
+
+}
+
+In kotlin, to implement inheritance we have to remember a few things.
+
+use the "open" keyword for the base class to let the kotlin know that the class is going to be inherited by some other class
+Also mention "open" for the properties of the base class which needs to be overwritten.(Can be seen in above example)
+	e.g.
+		open class SchoolPerson(open val name: String,open var age:Int){
+
+For the derived class you have to declare "override" for the parameters that you want to override. Also after the class itself you have to name the class that you have to inherit from.
+	e.g.
+		class Teacher(override val name: String,override var age: Int, var course: String):SchoolPerson(name, age){
