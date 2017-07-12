@@ -1,0 +1,70 @@
+As we have seen, we can use the "open" keyword to implement the inheritance to avoid duplication of code that perform the same task.
+e.g. printing out profile of student or teacher.
+
+Use of "open" keyword allows creation and use of base class in your program.
+If you don't want your base class objects hanging around in your program you can instead declare the class as "abstract"
+When you declare a class as "abstract" you limit the creation of base class objects.
+e.g.
+	abstract class SchoolAttendant(open val name: String,open var age:Int){
+
+
+On the other hand if you want to make any function to be implemented as must inside the derived classes then you can define such method as abstract.
+e.g.
+    abstract fun print()
+
+
+Complete sample code
+
+package oo
+
+/**
+ * Created by Hemant on 7/12/2017.
+ */
+
+
+
+abstract class SchoolAttendant(open val name: String,open var age:Int){
+
+    // methods
+    fun speak(){
+        println("Hello!")
+    }
+
+    fun greet(name: String){
+        println("Hello $name!")
+    }
+
+    fun getYearOfBirth(): Int{
+        return 2017 - age
+    }
+
+    fun getBirthYear() = 2017 - age
+
+    abstract fun print()
+}
+
+class SchoolStudent(override val name: String,override var age: Int, var house: String):SchoolAttendant(name,age){
+    override fun print(){
+        println("Student: [Name = $name, Age = $age, House = $house]")
+    }
+}
+
+class SchoolTeacher(override val name: String,override var age: Int, var course: String):SchoolAttendant(name, age){
+    override fun print(){
+        println("Teacher:[Name = $name, Age = $age, Course = $course]")
+    }
+}
+
+fun main(args: Array<String>) {
+
+
+    val student = SchoolStudent("Harry Potter",18,"Gryffindor")
+    student.greet("Harry Potter")
+    println(student.getBirthYear())
+    student.print()
+
+    val teacher = SchoolTeacher("Severus Snape",45,"Potions Master")
+    teacher.print()
+    println(teacher.getYearOfBirth())
+
+}
