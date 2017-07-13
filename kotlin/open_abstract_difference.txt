@@ -1,0 +1,29 @@
+The difference between the declaring any class as "open" or "abstract" is that,
+if the class is defined as "open" then we can instantiate the object of that class.
+When a class is declared as "abstract" then we cannot instatiate its object.
+If you want to inherit the abstract class then you need to override the functions that are defined abstract in the abstract class
+While inheriting any class if you don't want to inherit its properties then define new properties the new class. In that case those properties are not declared as override as they are not overriding the properties of the base class.
+e.g.
+
+abstract class Normal(open val name: String,open var age: Int){
+    abstract fun print()
+
+}
+
+class SubClass(override val name: String,override var age: Int, var gender: String): Normal(name,age){
+    override fun print(){
+        println("Subclass: [$name,$age,$gender]")
+    }
+}
+
+fun main(args: Array<String>) {
+    val subclass = SubClass("Max",25,"Male")
+    subclass.print()
+
+}
+
+
+Here the "SubClass" is inherited from "Normal" class.
+The properties "name" and "age" are also inherited.
+The property "gender" for the "SubClass" is new property of its own so just defined as whether its constant or variable and its type.
+e.g. 	var gender: String
