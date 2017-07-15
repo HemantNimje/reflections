@@ -1,0 +1,41 @@
+The interface are for giving a concrete for the class declarations those need to be override.
+For an interface you dont need to declare the functions or its properties as abstract. Those are abstract implicitly.
+
+e.g.
+
+
+interface Drivable{
+    fun drive()
+}
+
+interface Buildable{
+    val timeRequiredToBuild: Int
+    fun build()
+}
+
+class Car(val color: String):Drivable,Buildable{
+    override val timeRequiredToBuild = 120
+    override fun drive() {
+        println("Driving a car..")
+    }
+
+    override fun build() {
+        println("Building a car..")
+    }
+}
+
+class Motorcycle(val color: String): Drivable{
+    override fun drive() {
+        println("Driving a Motorcycle.")
+    }
+}
+
+fun main(args: Array<String>) {
+    val car = Car("Blue")
+    car.drive()
+    car.build()
+    println("Time required to build the " + car.color + " car = " + car.timeRequiredToBuild)
+
+    val motorcycle = Motorcycle("Red")
+    motorcycle.drive()
+}
