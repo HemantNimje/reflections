@@ -1,0 +1,31 @@
+Consider the following example for overriding to understand how the overriding can be done
+e.g.
+
+abstract class Course(val topic:String, val price: Double){
+    open fun learn(){
+        println("Learning a $topic course.")
+    }
+}
+
+interface Learnable{
+    fun learn(){
+        println("Learning...")
+    }
+}
+
+class KotlinCourse():Course("Special Kotlin Course",15.99),Learnable{
+    override final fun learn(){
+        super<Learnable>.learn()
+        println("I'm one of the first people to learn kotlin")
+    }
+}
+
+fun main(args: Array<String>) {
+    val course = KotlinCourse()
+    course.learn()
+}
+
+
+Here we can see that our class KotlinCourse inherits both Course class and Learnable interface.
+The learn method from the Course, Learnable can be overriden in the KotlinCourse class since they are defined as open whereas the learn method cannot be overridden since it is final.
+
