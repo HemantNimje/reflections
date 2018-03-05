@@ -1,0 +1,25 @@
+There are five different ways to store the data based on the usage of that data. The type of persistence should be selected depending on you long the data needs to be saved. Is it something you want to save just for that instance/ is it till the app is installed/ is it to be used among different devices like phone, tablet, etc. The persistence can be selected using
+
+i. Persistence Option
+ii. Type of data saved
+iii. Length of time saved
+
+1. i. onSavedInstanceState
+1. ii. Key/value (complex values)
+1. iii. While app is open
+
+2. i. SharedPreferences
+2. ii. Key/value (primitive values)
+2. iii. Between app and phone restarts
+
+3. i. SQLite Database
+3. ii. Organized, more complicated text/numeric/Boolean data
+3. iii. Between app and phone restarts
+
+4. i. Internal/External storage
+4. ii. Multimedia or larger data
+4. iii. Between app and phone restarts
+
+5. i. Server (ex. Firebase)
+5. ii. Data that multiple phones will access
+5. iii. Between app and phone restarts, deleting the app, using a different phone, etc.
